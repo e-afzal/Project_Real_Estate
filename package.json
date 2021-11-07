@@ -1,0 +1,31 @@
+{
+  "name": "Project_Real_Estate",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node BackEnd/server",
+    "server": "nodemon BackEnd/server",
+    "client": "npm start --prefix FrontEnd",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node BackEnd/seeder",
+    "data:destroy": "node BackEnd/seeder -d",
+    "heroku-postBuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix FrontEnd && npm run build --prefix FrontEnd"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.8"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
