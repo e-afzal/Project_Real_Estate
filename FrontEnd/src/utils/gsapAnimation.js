@@ -46,8 +46,8 @@ export function phoneDesktopAnimation(
     opacity: 1,
     scrollTrigger: {
       trigger: phoneContainer.current,
-      start: "45% center",
-      end: "100% 40%",
+      start: "top center",
+      end: "40% center",
       toggleActions: "play pause reverse none",
       scrub: 2,
     },
@@ -57,8 +57,8 @@ export function phoneDesktopAnimation(
     opacity: 1,
     scrollTrigger: {
       trigger: phoneContainer.current,
-      start: "45% center",
-      end: "100% 40%",
+      start: "top center",
+      end: "40% center",
       toggleActions: "reset pause reverse none",
       scrub: 2,
     },
