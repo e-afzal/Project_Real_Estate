@@ -102,7 +102,7 @@ const Home = () => {
           </div>
 
           <div className="hero-img" ref={heroImg}>
-            <img src={bigHome} alt="Row of Villas" />
+            <img src={bigHome} alt="Row of Villas" loading="lazy" />
           </div>
         </div>
       </section>
@@ -230,17 +230,17 @@ const Home = () => {
         </div>
         <div className="mobile-gallery">
           <Link to="/projects/6000d4c6fc5bb6333473a267" className="project">
-            <img src={grandViews} alt="Grand Views" />
+            <img src={grandViews} alt="Grand Views" loading="lazy" />
             <p>Grand Views</p>
           </Link>
 
           <Link to="/projects/6000d4c6fc5bb6333473a266" className="project">
-            <img src={muraba} alt="Grand Views" />
+            <img src={muraba} alt="Grand Views" loading="lazy" />
             <p>Muraba Residences</p>
           </Link>
 
           <Link to="/projects/6000d4c6fc5bb6333473a265" className="project">
-            <img src={ghadeer} alt="Grand Views" />
+            <img src={ghadeer} alt="Grand Views" loading="lazy" />
             <p>Al Ghadeer</p>
           </Link>
         </div>
@@ -263,7 +263,7 @@ const Home = () => {
           </Link>
 
           <Link to="/neighbourhood/al-barari" className="select-img-2">
-            <img src={imgBarari} alt="Al Barari" />
+            <img src={imgBarari} alt="Al Barari" loading="lazy" />
             <div className="overlay">
               <div className="overlay-content">
                 <Link to="/neighbourhood/al-barari">
@@ -275,7 +275,7 @@ const Home = () => {
           </Link>
 
           <Link to="neighbourhood/palm-jumeirah" className="select-img-3">
-            <img src={imgPalm} alt="Palm Jumeirah" />
+            <img src={imgPalm} alt="Palm Jumeirah" loading="lazy" />
             <div className="overlay">
               <div className="overlay-content">
                 <Link to="neighbourhood/palm-jumeirah">
@@ -290,7 +290,7 @@ const Home = () => {
             to="/neighbourhood/jumeirah-beach-residence"
             className="select-img-4"
           >
-            <img src={imgJbr} alt="JBR" />
+            <img src={imgJbr} alt="JBR" loading="lazy" />
             <div className="overlay">
               <div className="overlay-content">
                 <Link to="/neighbourhood/jumeirah-beach-residence">
@@ -327,7 +327,12 @@ const Home = () => {
             </Link>
           </div>
           <div className="experts-img" ref={phoneModel} style={{ opacity: 0 }}>
-            <img src={phoneImg} alt="phone" style={{ maxWidth: "45%" }} />
+            <img
+              src={phoneImg}
+              alt="phone"
+              style={{ maxWidth: "45%" }}
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -339,7 +344,7 @@ const Home = () => {
             ref={phoneMobileModel}
             style={{ opacity: 0 }}
           >
-            <img src={phoneImg} alt="phone" />
+            <img src={phoneImg} alt="phone" loading="lazy" />
           </div>
           <div className="experts-content">
             <h3 className="light">Exclusive Access to Local Experts</h3>
