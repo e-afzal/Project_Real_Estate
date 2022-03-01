@@ -12,7 +12,7 @@ import Navbar from "../components/Navbar";
 import Metatag from "../components/Metatag";
 import ScrollToTop from "../components/ScrollToTop";
 
-const Contact = () => {
+const Contact = ({ history }) => {
   const [option, setOption] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -81,7 +81,11 @@ const Contact = () => {
           <div className="contact-form">
             <h3>Have questions?</h3>
             <form onSubmit={formHandler}>
-              <select name="option" id="option">
+              <select
+                name="option"
+                id="option"
+                onChange={(e) => setOption(e.target.value)}
+              >
                 <option selected disabled>
                   I'd like to:
                 </option>

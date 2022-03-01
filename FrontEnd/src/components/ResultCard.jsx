@@ -14,7 +14,7 @@ const ResultCard = ({ singleProperty }) => {
 
   return (
     <li className={`grid-card`}>
-      <a href={`/properties/${_id}`} target="_blank" rel="noreferrer">
+      <a href={`/properties/${_id}`} rel="noreferrer">
         <div>
           <img
             src={singleImage}

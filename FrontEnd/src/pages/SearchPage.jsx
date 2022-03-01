@@ -160,31 +160,6 @@ const SearchPage = () => {
   }, []);
 
   // HANDLERS
-  const handleBoS = (element) => {
-    setTransaction(element.value);
-  };
-  const handleCategory = (element) => {
-    setCategory(element.value);
-  };
-  const handlePriceFrom = (element) => {
-    setPriceFrom(Number(element.value));
-  };
-  const handlePriceTo = (element) => {
-    setPriceTo(Number(element.value));
-  };
-  const handleMinBD = (element) => {
-    setMinBeds(Number(element.value));
-  };
-  const handleMaxBD = (element) => {
-    setMaxBeds(Number(element.value));
-  };
-  const handleMinArea = (element) => {
-    setMinArea(Number(element.value));
-  };
-  const handleMaxArea = (element) => {
-    setMaxArea(Number(element.value));
-  };
-
   // FILTER THROUGH THE 'BACKEND'
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -257,28 +232,34 @@ const SearchPage = () => {
       <section id="filter">
         <div className="searchbox">
           <form className="form-grid">
-            <select name="transaction" id="BoS">
+            <select
+              name="transaction"
+              id="BoS"
+              onChange={(e) => setTransaction(e.target.value)}
+            >
               {dropdownItems.BoS.map((each, index) => (
                 <DropDownItems
                   key={index}
                   value={each.value}
                   name={each.name}
                   disabled={each.disabled}
-                  onClick={handleBoS}
                   selected={each.selected}
                   id="BoS"
                 />
               ))}
             </select>
 
-            <select name="category" id="type">
+            <select
+              name="category"
+              id="type"
+              onChange={(e) => setCategory(e.target.value)}
+            >
               {dropdownItems.type.map((each, index) => (
                 <DropDownItems
                   key={index}
                   value={each.value}
                   name={each.name}
                   disabled={each.disabled}
-                  onClick={handleCategory}
                   selected={each.selected}
                   id="category"
                 />
@@ -294,84 +275,102 @@ const SearchPage = () => {
               onChange={(e) => handleSearch(e.target.value)}
             />
 
-            <select name="priceFrom" id="priceFrom">
+            <select
+              name="priceFrom"
+              id="priceFrom"
+              onChange={(e) => setPriceFrom(e.target.value)}
+            >
               {dropdownItems.priceFrom.map((each, index) => (
                 <DropDownItems
                   key={index}
                   value={each.value}
                   name={each.name}
                   disabled={each.disabled}
-                  onClick={handlePriceFrom}
                   selected={each.selected}
                   id="priceFrom"
                 />
               ))}
             </select>
 
-            <select name="priceTo" id="priceTo">
+            <select
+              name="priceTo"
+              id="priceTo"
+              onChange={(e) => setPriceTo(e.target.value)}
+            >
               {dropdownItems.priceTo.map((each, index) => (
                 <DropDownItems
                   key={index}
                   value={each.value}
                   name={each.name}
                   disabled={each.disabled}
-                  onClick={handlePriceTo}
                   selected={each.selected}
                   id="priceTo"
                 />
               ))}
             </select>
 
-            <select name="minBeds" id="minBD">
+            <select
+              name="minBeds"
+              id="minBD"
+              onChange={(e) => setMinBeds(e.target.value)}
+            >
               {dropdownItems.minBD.map((each, index) => (
                 <DropDownItems
                   key={index}
                   value={each.value}
                   name={each.name}
                   disabled={each.disabled}
-                  onClick={handleMinBD}
                   selected={each.selected}
                   id="minBD"
                 />
               ))}
             </select>
 
-            <select name="maxBeds" id="maxBD">
+            <select
+              name="maxBeds"
+              id="maxBD"
+              onChange={(e) => setMaxBeds(e.target.value)}
+            >
               {dropdownItems.maxBD.map((each, index) => (
                 <DropDownItems
                   key={index}
                   value={each.value}
                   name={each.name}
                   disabled={each.disabled}
-                  onClick={handleMaxBD}
                   selected={each.selected}
                   id="maxBD"
                 />
               ))}
             </select>
 
-            <select name="minArea" id="minArea">
+            <select
+              name="minArea"
+              id="minArea"
+              onChange={(e) => setMinArea(e.target.value)}
+            >
               {dropdownItems.minArea.map((each, index) => (
                 <DropDownItems
                   key={index}
                   value={each.value}
                   name={each.name}
                   disabled={each.disabled}
-                  onClick={handleMinArea}
                   selected={each.selected}
                   id="minArea"
                 />
               ))}
             </select>
 
-            <select name="maxArea" id="maxArea">
+            <select
+              name="maxArea"
+              id="maxArea"
+              onChange={(e) => setMaxArea(e.target.value)}
+            >
               {dropdownItems.maxArea.map((each, index) => (
                 <DropDownItems
                   key={index}
                   value={each.value}
                   name={each.name}
                   disabled={each.disabled}
-                  onClick={handleMaxArea}
                   selected={each.selected}
                   id="maxArea"
                 />
@@ -395,13 +394,16 @@ const SearchPage = () => {
           </h5>
           <div className="flex-sort">
             <h5>Sort by:</h5>
-            <select name="sort" id="sort">
+            <select
+              name="sort"
+              id="sort"
+              onChange={(e) => handleSort(e.target.value)}
+            >
               {sortItems.map((eachItem, index) => (
                 <SortResults
                   key={index}
                   value={eachItem.value}
                   name={eachItem.name}
-                  onSelectSort={handleSort}
                 />
               ))}
             </select>

@@ -1,20 +1,14 @@
 import React from "react";
 
 // Component used on the 'search' page. E.g. 'priceFrom', 'priceTo' dropdowns.
-const DropDownItems = ({ value, name, disabled, selected, onClick, id }) => {
-  const selectedElement = (e) => {
-    onClick({ field: e.target.id, value: e.target.value });
-  };
+const DropDownItems = ({ value, name, disabled, selected, id }) => {
+  // const selectedElement = (e) => {
+  //   onClick({ field: e.target.id, value: e.target.value });
+  // };
 
   return (
     <>
-      <option
-        value={value}
-        disabled={disabled}
-        selected={selected}
-        onClick={selectedElement}
-        id={id}
-      >
+      <option value={value} disabled={disabled} selected={selected} id={id}>
         {name}
       </option>
     </>

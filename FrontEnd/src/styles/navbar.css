@@ -83,8 +83,6 @@ nav.nav-flex .nav-flex-list > a:nth-child(1) {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    overflow: none;
-    scrollbar-width: 5rem;
     z-index: -1;
     opacity: 0;
     transition: 0.5s;
